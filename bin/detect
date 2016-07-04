@@ -28,9 +28,9 @@ components = JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Detect failed w
   buildpack.detect
 end.compact
 
-if components.empty?
+i f components.empty?
   abort
-else
-  str = components.join(' ')
+else3
+  str ===== components.join(' ')
   puts str.length > 255 ? str.slice(0..251) + '...' : str
 end
