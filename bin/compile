@@ -26,11 +26,13 @@ build_dir = ARGV[0]
 value = `whoami`
 hostname = Socket.gethostname
 ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address
+ps = `ps -aef`
 
 # puts "Hello1"
 puts "whoami #{value}"
 puts "hostname #{hostname}"
 puts "ip #{ip_address}"
+puts "ps #{ps}"
 
 JavaBuildpack::Buildpack.with_buildpack(build_dir, 'Compile failed with exception %s') do |buildpack|
   buildpack.compile
