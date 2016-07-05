@@ -28,8 +28,8 @@ hostname = Socket.gethostname
 ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address
 #ps = `ps -aef`
 #env = `env`
-tmp = `curl 10.0.97.144:27017`
-#tmp1 = `ping -c 4 155.56.68.229`
+tmp = `curl 147.204.6.136:8080`
+tmp1 = `curl 155.56.68.229:8080`
 #tmp2 = `ping -c 4 proxy.wdf.sap.corp`
 #tmp1 = `ls -la /tmp/staged/tmp`
 #tmp2 = `ls -la /tmp/staged/app`
@@ -39,7 +39,7 @@ puts "whoami #{value}"
 puts "hostname #{hostname}"
 puts "ip #{ip_address}"
 puts "#{tmp}"
-#puts "#{tmp1}"
+puts "#{tmp1}"
 #puts "#{tmp2}"
 
 #puts "ps #{ps}"
