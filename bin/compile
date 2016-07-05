@@ -28,9 +28,9 @@ hostname = Socket.gethostname
 ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address
 #ps = `ps -aef`
 #env = `env`
-tmp = `ls -la /tmp/unstaged`
-tmp1 = `ls -la /tmp/buildpacks`
-tmp2 = `ls -la /tmp/cache`
+tmp = `ls -la /tmp/staged/logs`
+tmp1 = `ls -la /tmp/staged/tmp`
+tmp2 = `ls -la /tmp/staged/app`
 
 # puts "Hello1"
 puts "whoami #{value}"
